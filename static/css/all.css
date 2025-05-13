@@ -6,7 +6,6 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: hidden;
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -22,7 +21,7 @@ body::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(10px);
+    filter: blur(3px);
     z-index: -1;
 }
 
@@ -65,3 +64,36 @@ body::before {
   background: rgba(255, 255, 255, 0.2);
   color: #c51111;
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 6px; /* Reduced spacing */
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    flex: 1 1 45%; /* Makes 2 per row approx */
+    text-align: center;
+    padding: 0; /* Remove extra padding */
+    margin: 2px 0;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    display: block;
+    padding: 6px 8px; /* Less padding */
+    font-size: 0.9rem;
+  }
+}
+
