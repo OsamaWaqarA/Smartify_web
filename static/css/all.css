@@ -65,7 +65,33 @@ body::before {
   color: #c51111;
 }
 
+#whatsapp,#facebook,#instagram{
+    width: 75px;;
+}
+
+.box_og2{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20%);
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#facebook{
+  margin-left: 45%;
+}
+
+#instagram{
+  float:right;
+}
+
 @media (max-width: 600px) {
+
+  #facebook{
+      margin-left: 20%;
+    }
+
   .navbar {
     flex-direction: column;
     align-items: center;
