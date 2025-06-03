@@ -1,63 +1,366 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="make your regular thing in home smart">
-        <meta name="smart" content="HTML, CSS, JavaScript">
-        <meta name="author" content="smartify">
-        <title>Smartify</title>
-        <link rel="stylesheet" href="static/css/all.css">
-        <link rel="stylesheet" href="static/css/index.css">
-        <link rel="icon" href="favicon.ico">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="robots" content="index, follow">
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="logo">Smartify</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>    
-        </nav>
-        <div class = "box_og">
-            <h3>Transform Ordinary Electronics into Smart Devices</h3>
-            <center>
-            <video src="static/css/video/Timeline 1.mp4" autoplay muted loop id = "intro_vid"></video>
-            <br>
-            <p>We Provide innovative solutions to upgrade your everyday appliances and devices with smart technology</p>
-            </center>
-             <section class="info-boxes">
-                <div class="box">
-                    <img src="static/css/images/processor.svg" id = "image_pro" alt="Processor Image">
-                    <h2>Custom Solutions</h2>
-                    <p>Smart solutions tailored to your lifestyle.</p>
-                </div>
-                <div class="box">
-                    <img src="static/css/images/cost-reduction.svg" id = "image_cos" alt="cost-reduction Image">
-                    <h2>Reduce Electricity Usage</h2>
-                    <p>Efficient automation saves power effortlessly.</p>
-                </div>
-                <div class="box">
-                    <img src="static/css/images/save-money.svg" id = "image_mon" alt="save_money Image">
-                    <h2>Save Money</h2>
-                    <p>Lower your bills with intelligent energy use.</p>
-                </div>
-            </section>
-        </div>
-        <br> 
-        <div class = "box_og2">
-            <center>
-                <h2>Get a Quote</h2>
-            </center>
-            <a href="https://wa.me/+923152118116" target="_blank"><img src="static/css/images/whatsapp.svg" id = "whatsapp"></a>
-            <a href = "https://www.facebook.com/profile.php?id=61576279126371" target="_blank"><img src="static/css/images/facebook.svg" id = "facebook"></a>
-            <a href ="https://www.instagram.com/oswaqar/profilecard/?igsh=MXU0NzJhaXRodTlwZg==" target="_blank"><img src="static/css/images/instagram.svg" id = "instagram"></a>
-        </div>
-        <br><br>
-        <br><br>
 
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smartify - Smart Home Automation Solutions</title>
+    <meta name="description" content="Transform your ordinary devices into intelligent, connected systems. Smartify offers custom smart home automation, IoT integration, and energy monitoring solutions." />
+    <meta name="author" content="Smartify" />
+    <meta name="keywords" content="smart home, automation, IoT, home assistant, energy monitoring, smart lighting, 3D printing, custom solutions, startup, local network control" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Smartify - Smart Home Automation Solutions" />
+    <meta property="og:description" content="Transform your ordinary devices into intelligent, connected systems. Save time, money, and energy with custom automation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=630&fit=crop" />
+    <meta property="og:site_name" content="Smartify" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Smartify - Smart Home Automation Solutions" />
+    <meta name="twitter:description" content="Transform your ordinary devices into intelligent, connected systems." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=630&fit=crop" />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://your-domain.com" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306b6d4'><path d='M13 10V3L4 14h7v7l9-11h-7z'/></svg>" type="image/svg+xml">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-content">
+          <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span class="logo-text">Smartify</span>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="nav-menu desktop-nav">
+            <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+            <button onclick="scrollToSection('about')" class="nav-link">About</button>
+            <button onclick="scrollToSection('services')" class="nav-link">Services</button>
+            <button onclick="scrollToSection('gallery')" class="nav-link">Gallery</button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav hidden">
+          <div class="mobile-nav-content">
+            <button onclick="scrollToSection('home')" class="mobile-nav-link">Home</button>
+            <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+            <button onclick="scrollToSection('services')" class="mobile-nav-link">Services</button>
+            <button onclick="scrollToSection('gallery')" class="mobile-nav-link">Gallery</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="gradient-text">Smartify</span>
+              <br />
+              Your World
+            </h1>
+            <p class="hero-description">
+              Transform your ordinary devices into intelligent, connected systems. 
+              Save time, money, and energy with custom smart home automation solutions.
+            </p>
+            <div class="hero-buttons">
+              <button onclick="scrollToSection('services')" class="btn-primary">
+                Explore Services
+              </button>
+              <button onclick="scrollToSection('gallery')" class="btn-secondary">
+                View Gallery
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Smartify</h2>
+          <div class="section-divider"></div>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <h3 class="about-subtitle">Revolutionizing Home Automation</h3>
+            <p class="about-paragraph">
+              At Smartify, we specialize in transforming your everyday "dumb" devices into intelligent, 
+              connected systems. From motors and lights to security systems and energy monitors, 
+              we make everything smart and interconnected.
+            </p>
+            <p class="about-paragraph">
+              Using cutting-edge technology including Home Assistant integration, 3D printing for custom 
+              modifications, and advanced sensors, we create personalized automation solutions that 
+              save you time, money, and energy.
+            </p>
+            <p class="about-paragraph">
+              Our expertise includes radar presence sensors, energy monitoring systems, custom IoT 
+              integrations, and much more. No project is too complex – if you can imagine it, 
+              we can smartify it.
+            </p>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-card stat-cyan">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Possibilities</div>
+            </div>
+            <div class="stat-card stat-purple">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">System Monitoring</div>
+            </div>
+            <div class="stat-card stat-green">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Custom Solutions</div>
+            </div>
+            <div class="stat-card stat-orange">
+              <div class="stat-number">Fresh</div>
+              <div class="stat-label">Startup Vision</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Services</h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            From simple device automation to complete smart home transformations, 
+            we offer comprehensive solutions tailored to your needs.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Smart Lighting</h3>
+            <p class="service-description">Transform your regular lights into smart, automated lighting systems with motion sensors and energy monitoring.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20V10"/>
+                <path d="M18 20V4"/>
+                <path d="M6 20v-6"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Energy Monitoring</h3>
+            <p class="service-description">Track your home's energy usage in real-time and optimize consumption to save money on electricity bills.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                <path d="M9 22v-4h6v4"/>
+                <path d="M8 6h.01"/>
+                <path d="M16 6h.01"/>
+                <path d="M12 6h.01"/>
+                <path d="M12 10h.01"/>
+                <path d="M12 14h.01"/>
+                <path d="M16 10h.01"/>
+                <path d="M16 14h.01"/>
+                <path d="M8 10h.01"/>
+                <path d="M8 14h.01"/>
+              </svg>
+            </div>
+            <h3 class="service-title">IoT Integration</h3>
+            <p class="service-description">Connect any device to your local network and integrate with Home Assistant for seamless automation.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Security Systems</h3>
+            <p class="service-description">Smart sensors and monitoring systems to keep your home safe with automated alerts and responses.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+                <path d="M12 18h.01"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Remote Control</h3>
+            <p class="service-description">Control all your smart devices from anywhere within your local network using your smartphone or voice commands.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Custom Solutions</h3>
+            <p class="service-description">3D printed modifications and custom automation solutions tailored to your specific needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Project Gallery</h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Explore our portfolio of smart home transformations and custom automation projects.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" alt="Smart Motor Control" class="gallery-image">
+            <div class="gallery-content">
+              <h3 class="gallery-title">Smart Motor Control</h3>
+              <p class="gallery-description">Automated gate system with remote monitoring</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop" alt="Home Automation Hub" class="gallery-image">
+            <div class="gallery-content">
+              <h3 class="gallery-title">Home Automation Hub</h3>
+              <p class="gallery-description">Central control system for all smart devices</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=300&fit=crop" alt="Smart Lighting System" class="gallery-image">
+            <div class="gallery-content">
+              <h3 class="gallery-title">Smart Lighting System</h3>
+              <p class="gallery-description">Motion-activated LED lighting with energy monitoring</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop" alt="Connected Living Room" class="gallery-image">
+            <div class="gallery-content">
+              <h3 class="gallery-title">Connected Living Room</h3>
+              <p class="gallery-description">Complete smart home transformation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          Ready to smartify your home? Contact us through your preferred platform and let's discuss your automation needs.
+        </p>
+
+        <div class="contact-buttons">
+          <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp">
+            <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.108"/>
+            </svg>
+            WhatsApp
+          </a>
+          
+          <a href="https://facebook.com/your-page" target="_blank" rel="noopener noreferrer" class="contact-btn facebook">
+            <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Facebook
+          </a>
+          
+          <a href="https://instagram.com/your-account" target="_blank" rel="noopener noreferrer" class="contact-btn instagram">
+            <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.435-3.396-1.165-.948-.729-1.594-1.708-1.938-2.937-.344-1.229-.229-2.482.345-3.76.573-1.277 1.437-2.297 2.592-3.059 1.154-.762 2.443-1.143 3.865-1.143 1.422 0 2.712.381 3.866 1.143 1.154.762 2.018 1.782 2.592 3.059.573 1.278.688 2.531.344 3.76-.344 1.229-.99 2.208-1.938 2.937-.948.73-2.099 1.165-3.396 1.165h-.001z"/>
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span class="footer-text">Smartify</span>
+          </div>
+          <p class="footer-copyright">
+            © 2024 Smartify. Making the world smarter, one device at a time.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
